@@ -20,16 +20,16 @@ const InputWorkoutForm = () => {
   return (
     <form onSubmit={handleSubmit((data: FormInputs) => console.log(data))}>
       <FormControl>
-        <FormLabel>Workout Name</FormLabel>
-        <Input type="workoutName" {...register("workoutName")} />
-        <FormLabel>Category</FormLabel>
-        <Input type="category" {...register("category")} />
-        <FormLabel>Weight</FormLabel>
-        <Input type="weight" {...register("weight")} />
-        <FormLabel>Reps</FormLabel>
-        <Input type="reps" {...register("reps")} />
-        <FormLabel>Sets</FormLabel>
-        <Input type="sets" {...register("sets")} />
+        <FormLabel htmlFor="workoutName">Workout Name</FormLabel>
+        <Input type="text" id="workoutName" {...register("workoutName")} />
+        <FormLabel htmlFor="category">Category</FormLabel>
+        <Input type="text" id="category" {...register("category")} />
+        <FormLabel htmlFor="weight">Weight</FormLabel>
+        <Input type="text" id="weight" {...register("weight")} />
+        <FormLabel htmlFor="reps">Reps</FormLabel>
+        <Input type="text" id="reps" {...register("reps")} />
+        <FormLabel htmlFor="sets">Sets</FormLabel>
+        <Input type="text" id="sets" {...register("sets")} />
         <Button marginTop={2} type="submit">
           Submit
         </Button>
